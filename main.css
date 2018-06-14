@@ -1,0 +1,16 @@
+body {
+  font-family: Arial;
+}
+
+.content {
+  text-align: center;
+}
+
+button {
+  background-color: powderblue;
+  border: 0px;
+  margin: 10px;
+  padding: 20px;
+}
+
+button:hover { background-color: turquoise; }
