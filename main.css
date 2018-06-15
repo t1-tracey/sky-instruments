@@ -1,9 +1,19 @@
 body {
   font-family: Arial;
+  background-color: white;
+  color: black;
 }
 
 .content {
   text-align: center;
+}
+
+h1, h2, h3 {
+  color: mediumslateblue;
+}
+
+p {
+  font-family: "San Francisco", Avenir, sans-serif;
 }
 
 button {
