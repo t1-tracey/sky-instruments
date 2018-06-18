@@ -5,11 +5,10 @@ var INTERVALS_IN_SEMITONES = [0, 2, 4, 5, 7, 9, 11] // Base, 2nd, 3rd, 4th, 5th 
 var SOUND_FILETYPE = '.wav';
 var ROOT_DIRNAME = './sounds/';
 var HARP_DIRNAME = 'harp/';
-var OCTAVE_LENGTH_IN_SEMITONES = 12
+var OCTAVE_LENGTH_IN_SEMITONES = 12;
 
 // Create Audios for all notes and put into a list
 var noteAudios = [];
-
 
 //TODO: change numbers here 4-7, when i get actual samples
 for (var octave = 2; octave < 5; octave++) {
@@ -19,8 +18,6 @@ for (var octave = 2; octave < 5; octave++) {
     noteAudios.push(noteAudio);
   };
 };
-
-noteAudios[24].play();
 
 // Create harp scale
 // Key , audios
@@ -79,4 +76,4 @@ output.innerHTML = key;
 keySlider.oninput = function() {
   key = KEYS[this.value];
   output.innerHTML = key;
-}
+};
