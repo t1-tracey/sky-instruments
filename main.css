@@ -11,7 +11,7 @@ body {
 }
 
 
-button .keys {
+.keys {
   width: 60px;
   height: 60px;
   background-color: white;
