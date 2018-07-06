@@ -15,9 +15,7 @@
 
   <h2>Harp</h2>
   <section id="harp">
-    <button class="keys" class="keys" onmousedown="harpScales[key][0].cloneNode(true).play()">○⃟</button><button class="keys" class="keys" onmousedown="harpScales[key][1].cloneNode(true).play()">◇</button><button class="keys" class="keys" onmousedown="harpScales[key][2].cloneNode(true).play()">○</button><button class="keys" onmousedown="harpScales[key][3].cloneNode(true).play()">◇</button><button class="keys" onmousedown="harpScales[key][4].cloneNode(true).play()">○</button><br />
-    <button class="keys" onmousedown="harpScales[key][5].cloneNode(true).play()">○</button><button class="keys" onmousedown="harpScales[key][6].cloneNode(true).play()">◇</button><button class="keys" onmousedown="harpScales[key][7].cloneNode(true).play()">○⃟</button><button class="keys" onmousedown="harpScales[key][8].cloneNode(true).play()">◇</button><button class="keys" onmousedown="harpScales[key][9].cloneNode(true).play()">○</button><br />
-    <button class="keys" onmousedown="harpScales[key][10].cloneNode(true).play()">○</button><button class="keys" onmousedown="harpScales[key][11].cloneNode(true).play()">◇</button><button class="keys" onmousedown="harpScales[key][12].cloneNode(true).play()">○</button><button class="keys" onmousedown="harpScales[key][13].cloneNode(true).play()">◇</button><button class="keys" onmousedown="harpScales[key][14].cloneNode(true).play()">○⃟</button><br />
+
   </section>
 
   <p>Key: <span id="key"></span></p>
@@ -25,7 +23,6 @@
   <div class="slidecontainer">
     <input type="range" min="0" max="11" value="0" class="slider" id="keySlider">
   </div>
-
 
   <footer>
     <h1>About</h2>
@@ -44,6 +41,11 @@
 
 
 <script type="text/javascript" src="./script.js"></script>
+<script type="text/javascript" src="./create-scales.js"></script>
+<script type="text/javascript" src="./create-instruments.js"></script>
+<script type="text/javascript" src="./keyboard.js"></script>
+
+
 
 </body>
 
