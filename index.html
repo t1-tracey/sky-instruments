@@ -10,42 +10,34 @@
 
 <body>
 
+<h1>Sky Instruments</h1>
 
-<div class="content">
-  <h1>Sky Instruments</h1>
+<h2>Harp</h2>
+<section id="harp">
+  <button onclick="harpScales[key][0].cloneNode(true).play()">○⃟</button><button onclick="harpScales[key][1].cloneNode(true).play()">◇</button><button onclick="harpScales[key][2].cloneNode(true).play()">○</button><button onclick="harpScales[key][3].cloneNode(true).play()">◇</button><button onclick="harpScales[key][4].cloneNode(true).play()">○</button><br />
+  <button onclick="harpScales[key][5].cloneNode(true).play()">○</button><button onclick="harpScales[key][6].cloneNode(true).play()">◇</button><button onclick="harpScales[key][7].cloneNode(true).play()">○⃟</button><button onclick="harpScales[key][8].cloneNode(true).play()">◇</button><button onclick="harpScales[key][9].cloneNode(true).play()">○</button><br />
+  <button onclick="harpScales[key][10].cloneNode(true).play()">○</button><button onclick="harpScales[key][11].cloneNode(true).play()">◇</button><button onclick="harpScales[key][12].cloneNode(true).play()">○</button><button onclick="harpScales[key][13].cloneNode(true).play()">◇</button><button onclick="harpScales[key][14].cloneNode(true).play()">○⃟</button><br />
+</section>
 
-  <h2>Harp</h2>
-  <section id="harp">
-    <button onclick="harpScales[key][0].play()">○⃟</button><button onclick="harpScales[key][1].play()">◇</button><button onclick="harpScales[key][2].play()">○</button><button onclick="harpScales[key][3].play()">◇</button><button onclick="harpScales[key][4].play()">○</button><br />
-    <button onclick="harpScales[key][5].play()">○</button><button onclick="harpScales[key][6].play()">◇</button><button onclick="harpScales[key][7].play()">○⃟</button><button onclick="harpScales[key][8].play()">◇</button><button onclick="harpScales[key][9].play()">○</button><br />
-    <button onclick="harpScales[key][10].play()">○</button><button onclick="harpScales[key][11].play()">◇</button><button onclick="harpScales[key][12].play()">○</button><button onclick="harpScales[key][13].play()">◇</button><button onclick="harpScales[key][14].play()">○⃟</button><br />
-  </section>
+<p>Key: <span id="key"></span></p>
 
-  <p>Key: <span id="key"></span></p>
-
-  <div class="slidecontainer">
-    <input type="range" min="0" max="11" value="0" class="slider" id="keySlider">
-  </div>
-
-  <h2>Bass</h2>
-  <section id="bass">
-    <button onclick="C4Audio.play()">◇</button><button onclick="D4Audio.play()">○</button><button onclick="E4Audio.play()">◇</button><button onclick="F4Audio.play()">○⃟</button><button onclick="G4Audio.play()">◇</button><button onclick="A4Audio.play()">○</button><button onclick="B4Audio.play()">◇</button><br />
-    <button onclick="C5Audio.play()">◇</button><button onclick="D5Audio.play()">○</button><button onclick="E5Audio.play()">◇</button><button onclick="F5Audio.play()">○⃟</button><button onclick="G5Audio.play()">◇</button><button onclick="A5Audio.play()">○</button><button onclick="B5Audio.play()">◇</button><br />
-  </section>
-
-  <footer>
-    <h1>About</h2>
-    <p>
-      work-in-progress.
-    </p>
-    <p>
-      I'm a noob, don't judge to hard
-    </p>
-    <p>
-    Piano sounds - https://freesound.org/people/jobro/packs/2489/
-    </p>
-  </footer>
+<div class="slidecontainer">
+  <input type="range" min="0" max="11" value="0" class="slider" id="keySlider">
 </div>
+
+
+<footer>
+  <h1>About</h2>
+  <p>
+    work-in-progress.
+  </p>
+  <p>
+    I'm a noob, don't judge to hard
+  </p>
+  <p>
+  Piano sounds - https://freesound.org/people/jobro/packs/2489/
+  </p>
+</footer>
 
 <script type="text/javascript" src="./script.js"></script>
 
