@@ -18,8 +18,6 @@ for (var row = 0; row < 3; row++) {
     button.classList.add("keys");
     button.setAttribute("onmousedown", "harpScales[key][" + String(harpKeyValue) + "].cloneNode(true).play()");
 
-    // console.log("harpScales[key][" + String(harpKeyValue) + "].cloneNode(true).play()")
-
     harp.append(button);
 
     harpKeyValue++;
