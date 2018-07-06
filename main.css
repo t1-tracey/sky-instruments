@@ -29,7 +29,7 @@ body {
   margin-right: 3px;
 }
 
-button:hover, button:active {
+button:active {
   background-color: black;
   color: white;
   border-color: grey;
