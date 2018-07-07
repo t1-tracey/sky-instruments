@@ -1,8 +1,6 @@
 var KEYS = ['C', 'C♯', 'D', 'E♭', 'E', 'F', 'F♯', 'G', 'A♭', 'A', 'B♭', 'B'];
 
 
-
-
 // Key slider
 var keySlider = document.getElementById('keySlider');
 var output = document.getElementById('key');
