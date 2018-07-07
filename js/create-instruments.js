@@ -7,9 +7,11 @@ for (var row = 0; row < 3; row++) {
 
     button = document.createElement("button");
 
+    // Circle and diamonds for alternating columns, diamond + circle combined for home keys
+
     if (harpKeyValue % 7 == 0) {
       button.innerHTML = "○⃟";
-    } else if (harpKeyValue % 2 == 0){
+    } else if ((harpKeyValue % 5 == 0 || harpKeyValue % 5 == 2) || (harpKeyValue % 5 == 4)) {
       button.innerHTML = "○";
     } else {
       button.innerHTML = "◇";
