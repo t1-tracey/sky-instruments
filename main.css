@@ -46,7 +46,7 @@ h1 > a {
   margin-right: 3px;
 }
 
-button:hover, button:active {
+button:active {
   background-color: deepskyblue;
   color: white;
   cursor: pointer;
