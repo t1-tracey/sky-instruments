@@ -1,28 +1,28 @@
 var harp = document.getElementById("harp");
-var harpKeyValue = 0;
+var harpKeyID = 0;
 for (var row = 0; row < 3; row++) {
 
   for (var column = 0; column < 5; column++){
 
     button = document.createElement("button");
 
-    if (harpKeyValue % 7 == 0) {
+    if (harpKeyID % 7 == 0) {
       // diamond + circle for home key
       button.innerHTML = "⟐";
-    } else if ((harpKeyValue % 5 == 0 || harpKeyValue % 5 == 2) || (harpKeyValue % 5 == 4)) {
+    } else if ((harpKeyID % 5 == 0 || harpKeyID % 5 == 2) || (harpKeyID % 5 == 4)) {
       // circle for odd columns
       button.innerHTML = "○";
     } else {
       // diamond for even columns
       button.innerHTML = "◇";
     };
-    button.id = "harp-" + String(harpKeyValue);
+    button.id = "harp-" + String(harpKeyID);
     button.classList.add("keys");
-    button.setAttribute("ontouchstart", "harpScales[key][" + String(harpKeyValue) + "].play()");
+    button.setAttribute("ontouchstart", "harpScales[key][" + String(harpKeyID) + "].play()");
 
     harp.append(button);
 
-    harpKeyValue++;
+    harpKeyID++;
   };
   harp.innerHTML += "<br />"
 };
