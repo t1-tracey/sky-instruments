@@ -1,7 +1,6 @@
 body {
   font-family: "Avenir", Arial, sans-serif;
   font-size: 20px;
-  background-color: white;
   color: black;
   margin: 20px;
 }
@@ -15,11 +14,6 @@ a:hover {
   text-decoration: underline;
 }
 
-h1 > a {
-  color: black;
-  text-decoration: none;
-}
-
 .content {
   width: 450px;
   margin-left: auto;
@@ -31,46 +25,19 @@ h1 > a {
 .keys {
   width: 60px;
   height: 60px;
-  background-color: white;
-  font-size: 30px;
+  font-size: 20px;
   margin: 10px;
   border-radius: 10px;
   border-width: 2px;
   border-color: black;
   border-style: solid;
   touch-action: manipulation;
+  background-color: white;
+  text-align: center;
 }
 
-#bass > button {
-  margin-left: 3px;
-  margin-right: 3px;
-}
-
-button:hover, button:active {
+.keys:hover, .keys:active {
   background-color: deepskyblue;
   color: white;
   cursor: pointer;
-}
-
-#primary-navigation > table {
-  margin-right: 0px;
-  margin-left: 0px;
-}
-
-td > a {
-  border-color: black;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-/*td > a:hover{
-  background-color: hotpink;
-  color: white;
-}*/
-
-.reference {
-  margin-left: 0px;
-  margin-right: 0px;
-  font-family: monospace;
-  font-size: 30px;
 }
