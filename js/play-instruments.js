@@ -1,3 +1,3 @@
-function play(ID, key, instrument) {
+function playInstrument(ID, key, instrument) {
 
-}
+};
