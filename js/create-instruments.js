@@ -8,10 +8,10 @@ for (var row = 0; row < 3; row++) {
 
     if (harpKeyValue % 7 == 0) {
       // diamond + circle for home key
-      button.innerHTML = "￮⃟";
+      button.innerHTML = "◦◇";
     } else if ((harpKeyValue % 5 == 0 || harpKeyValue % 5 == 2) || (harpKeyValue % 5 == 4)) {
       // circle for odd columns
-      button.innerHTML = "￮";
+      button.innerHTML = "◦";
     } else {
       // diamond for even columns
       button.innerHTML = "◇";
