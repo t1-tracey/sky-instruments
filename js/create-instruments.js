@@ -1,4 +1,3 @@
-
 var harp = document.getElementById("harp");
 var harpKeyValue = 0;
 for (var row = 0; row < 3; row++) {
@@ -7,18 +6,19 @@ for (var row = 0; row < 3; row++) {
 
     button = document.createElement("button");
 
-    // Circle and diamonds for alternating columns, diamond + circle combined for home keys
-
     if (harpKeyValue % 7 == 0) {
-      button.innerHTML = "○⃟";
+      // diamond + circle for home key
+      button.innerHTML = "￮⃟";
     } else if ((harpKeyValue % 5 == 0 || harpKeyValue % 5 == 2) || (harpKeyValue % 5 == 4)) {
-      button.innerHTML = "○";
+      // circle for odd columns
+      button.innerHTML = "￮";
     } else {
+      // diamond for even columns
       button.innerHTML = "◇";
     };
     button.id = "harp-" + String(harpKeyValue);
     button.classList.add("keys");
-    button.setAttribute("onmousedown", "harpScales[key][" + String(harpKeyValue) + "].cloneNode(true).play()");
+    button.setAttribute("ontouchstart", "harpScales[key][" + String(harpKeyValue) + "].play()");
 
     harp.append(button);
 

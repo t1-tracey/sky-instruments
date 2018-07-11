@@ -1,10 +1,12 @@
 var noteFilenames = ['c', 'c-sharp', 'd', 'e-flat', 'e', 'f', 'f-sharp', 'g', 'a-flat', 'a', 'b-flat', 'b'];
-var INTERVALS_IN_SEMITONES = [0, 2, 4, 5, 7, 9, 11]
+
 var SOUND_FILETYPE = '.wav';
 var ROOT_DIRNAME = './sounds/';
 
 var HARP_DIRNAME = 'harp/';
 var OCTAVE_LENGTH_IN_SEMITONES = 12;
+
+var INTERVALS_IN_SEMITONES = [0, 2, 4, 5, 7, 9, 11]
 
 // Create Audios for all notes and put into a list
 var noteAudios = [];
@@ -21,8 +23,8 @@ var harpScales = {};
 
 for (var keyIdx = 0; keyIdx < KEYS.length; keyIdx++) {
   harpKey = KEYS[keyIdx];
-  scale = createHarpScale(keyIdx, noteAudios);
-  harpScales[harpKey] = scale;
+  harpScale = createHarpScale(keyIdx, noteAudios);
+  harpScales[harpKey] = harpScale;
 };
 
 function createOctaveScale(baseNoteIdx, audios) {
