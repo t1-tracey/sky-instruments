@@ -8,48 +8,54 @@ var OCTAVE_LENGTH_IN_SEMITONES = 12;
 
 var INTERVALS_IN_SEMITONES = [0, 2, 4, 5, 7, 9, 11]
 
-// Create Audios for all notes and put into a list
-var noteAudios = [];
+function createOctave(instrument, startNoteIdx, filepaths) {
 
-for (var octave = 2; octave < 5; octave++) {
-  for (var noteIdx = 0; noteIdx < noteFilenames.length; noteIdx++) {
-    var noteFilepath = ROOT_DIRNAME + HARP_DIRNAME + noteFilenames[noteIdx] + octave.toString() + SOUND_FILETYPE;
-    var noteAudio = new Audio(noteFilepath);
-    noteAudios.push(noteAudio);
-  };
-};
-
-var harpScales = {};
-
-for (var keyIdx = 0; keyIdx < KEYS.length; keyIdx++) {
-  harpKey = KEYS[keyIdx];
-  harpScale = createHarpScale(keyIdx, noteAudios);
-  harpScales[harpKey] = harpScale;
-};
-
-function createOctaveScale(baseNoteIdx, audios) {
-
-  // Return single-octave list of audios
+  // Return single-octave list of filepaths
 
   var scale = [];
 
   for (var intervalIdx = 0; intervalIdx < INTERVALS_IN_SEMITONES.length; intervalIdx++) {
     var interval = INTERVALS_IN_SEMITONES[intervalIdx];
-    scale.push(noteAudios[baseNoteIdx + interval]);
+    scale.push(filepaths[instrument][startNoteIdx + interval]);
   }
   return scale;
 };
 
-function createHarpScale(baseNoteIdx, audios) {
+function createScale(instrument, startNoteIdx, filepaths) {
 
-  // Harp scale consists of 2 octaves (inclusive)
+  if (instrument == "harp") {
 
-  var firstOctave = createOctaveScale(baseNoteIdx, audios);
-  var secondOctave = createOctaveScale(baseNoteIdx + OCTAVE_LENGTH_IN_SEMITONES, audios);
-  var lastNote = audios[baseNoteIdx + (2 * OCTAVE_LENGTH_IN_SEMITONES)];
+    // Harp scale consists of 2 octaves (inclusive)
 
-  var scale = firstOctave.concat(secondOctave);
-  scale.push(lastNote);
+    var firstOctave = createOctave(instrument, startNoteIdx, filepaths);
+    var secondOctave = createOctave(instrument, startNoteIdx + OCTAVE_LENGTH_IN_SEMITONES, filepaths);
+    var lastNote = filepaths[instrument][startNoteIdx + (2 * OCTAVE_LENGTH_IN_SEMITONES)];
 
-  return scale;
+    var scale = firstOctave.concat(secondOctave);
+    scale.push(lastNote);
+
+    return scale;
+
+  }
+
 };
+
+var instrumentFilepaths = {};
+
+instrumentFilepaths["harp"] = [];
+
+for (var octave = 2; octave < 5; octave++) {
+  for (var noteIdx = 0; noteIdx < noteFilenames.length; noteIdx++) {
+    var harpFilepath = ROOT_DIRNAME + HARP_DIRNAME + noteFilenames[noteIdx] + octave.toString() + SOUND_FILETYPE;
+    instrumentFilepaths["harp"].push(harpFilepath);
+  }
+}
+
+var instrumentScales = {};
+instrumentScales["harp"] = {};
+
+for (var keyIdx = 0; keyIdx < KEYS.length; keyIdx++) {
+  harpKey = KEYS[keyIdx];
+  harpScale = createScale("harp", keyIdx, instrumentFilepaths);
+  instrumentScales["harp"][harpKey] = harpScale;
+}
