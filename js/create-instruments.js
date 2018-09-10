@@ -18,7 +18,7 @@ for (var row = 0; row < 3; row++) {
     };
     button.id = "harp-" + String(harpKeyID);
     button.classList.add("keys");
-    // button.setAttribute("ontouchstart", "playInstrument(instrumentScales, \"harp\", key, " + String(harpKeyID) + ")");
+    button.setAttribute("onmousedown", "playInstrument(instrumentScales, \"harp\", key, " + String(harpKeyID) + ")");
     button.setAttribute("ontouchstart", "playInstrument(instrumentScales, \"harp\", key, " + String(harpKeyID) + ")");
 
     harp.append(button);
