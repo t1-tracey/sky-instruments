@@ -64,9 +64,5 @@ function checkKeyPressed(evt) {
 
     if (validKeyPressed) {
       playInstrument(instrumentScales, "harp", key, KEY_MAPPINGS[keyPressed]);
-
-      // Highlight the corresponding button
-      // var correspondingButton = document.getElementById("harp-" + String(KEY_MAPPINGS));
-      // correspondingButton.classList.add("keys-highlight");
     };
 }
